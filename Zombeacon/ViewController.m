@@ -102,6 +102,7 @@ static const float kLightestZombieAlpha = 0.05f;
     // Be sure to register the view controller as the location manager delegate to obtain callbacks
     // for beacon monitoring
     self.locManager = [[CLLocationManager alloc] init];
+    [self.locManager requestAlwaysAuthorization];
     self.locManager.delegate = self;
 
     // Initialize the CBPeripheralManager.  Advertising comes later.
